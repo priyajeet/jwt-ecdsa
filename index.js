@@ -6,4 +6,9 @@ const { argv } = require("yargs");
 const path = require("path");
 
 const privateKey = fs.readFileSync(path.resolve(argv.privateKey));
-console.log(jwt.sign({ foo: "bar" }, privateKey, { algorithm: "ES384" }));
+const { payload } = argv;
+
+console.log("\n=============== Payload ==============");
+console.log(JSON.stringify(payload, null, 2));
+console.log("\n================= JTW ================");
+console.log(jwt.sign(payload, privateKey, { algorithm: "ES384" }));
