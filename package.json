@@ -1,5 +1,5 @@
 {
-  "name": "ivs-jwt-ecdsa",
+  "name": "jwt-ecdsa",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
